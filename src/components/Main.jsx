@@ -1,5 +1,12 @@
 import React from "react";
-import { projects, toolsAPlatforms, topSkills } from "../constants";
+import {
+  about,
+  certificates,
+  projects,
+  socialLinks,
+  toolsAPlatforms,
+  topSkills,
+} from "../constants";
 
 const Main = () => {
   return (
@@ -43,15 +50,9 @@ const Main = () => {
       </div>
       <div className="About-section mb-8 text-xs">
         <h5 className="pb-8 whitespace-pre-line">ABOUT</h5>
-        <div className="subpixel-antialiased">
-          Innovative professional with a 3 year experience in developing (full
-          stack), backend / frontend, is accredited by peers, subordinates,
-          senior leaders as well as clients for tenacity and the ability to
-          gracefully handle the dynamics of a rapidly changing corporate
-          environment.
-        </div>
+        <div className="subpixel-antialiased">{about}</div>
       </div>
-      <div>
+      <div className="projects-section mb-8">
         <div>
           <h4 className="font-semibold uppercase mb-3 text-xs" id="projects">
             Projects
@@ -93,11 +94,7 @@ const Main = () => {
             </div>
             <div>
               <p className="w-full py-4 whitespace-pre-line text-[10px]">
-                An open source project and Your own Api Hub to learn and master
-                API integration. With over 2000+ stars on github, it comes with
-                pre cooked public apis, kitchen sink module, and full blown
-                complex app apis like e-commerce, social media, todos,
-                authentication and many more to come in future
+                {item.overview}
               </p>
             </div>
             <div>
@@ -118,6 +115,55 @@ const Main = () => {
             </div>
           </div>
         ))}
+
+        <small className="italic underline text-gray-700 font-semibold w-full inline-flex justify-end items-end gap-1">
+          View more of my work on my{" "}
+          <a
+            href={`${socialLinks.github}`}
+            className="text-blue-500"
+            target="_blank"
+          >
+            github
+          </a>{" "}
+          profile .
+        </small>
+      </div>
+
+      <div className="certificate-section">
+        <div>
+          <h5 className="font-semibold text-front text-sm uppercase my-3">
+            Certificates
+          </h5>
+        </div>
+        <div className="certificates-list">
+          {certificates.map((cert) => (
+            <div
+              key={cert._id}
+              className="border-t-4 border-line relative flex flex-wrap bg-white p-4 lg:p-8 bg-no-repeat text-sm mb-6 shadow-xl"
+            >
+              <div className="w-full pb-4 lg:w-2/5 lg:pr-8 lg:pb-0">
+                <img
+                  src={`${cert.pic}`}
+                  alt=""
+                  className="border border-spacing-1 border-gray-300"
+                />
+              </div>
+              <div className="lg:flex-1">
+                <h4 className="font-bold">{cert.certficateName} </h4>
+                <a
+                  className="underline break-all hover:opacity-75 transition-opacity duration-150"
+                  rel="noreferrer noopener"
+                  href={`${cert.certificateUrl}`}
+                  target="_blank"
+                >
+                  Credential URL{" "}
+                </a>
+                <p className="w-full whitespace-pre-line">{cert.issuerName}</p>
+                <p className="w-full whitespace-pre-line">{cert.validity}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
