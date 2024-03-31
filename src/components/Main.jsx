@@ -52,7 +52,7 @@ const Main = () => {
         <h5 className="pb-8 whitespace-pre-line">ABOUT</h5>
         <div className="subpixel-antialiased">{about}</div>
       </div>
-      <div className="projects-section mb-8">
+      <div className="projects-section mb-8" id="projects">
         <div>
           <h4 className="font-semibold uppercase mb-3 text-xs" id="projects">
             Projects
@@ -129,7 +129,7 @@ const Main = () => {
         </small>
       </div>
 
-      <div className="certificate-section">
+      <div className="Certificates" id="Certificates">
         <div>
           <h5 className="font-semibold text-front text-sm uppercase my-3">
             Certificates

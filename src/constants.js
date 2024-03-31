@@ -75,20 +75,36 @@ export const projects = [
 export const certificates = [
   {
     _id: 1,
-    pic: "https://wajeshubham-portfolio.s3.ap-south-1.amazonaws.com/CCP.png",
-    certficateName: "AWS Certified Cloud Practitioner",
+    pic: "https://res.cloudinary.com/dxfdxwvlm/image/upload/v1711694859/jovian_Pandas_cert_page-0001_zfq4m6.jpg",
+    certficateName: "Machine Laerning with Python:Zero to Pandas",
     certificateUrl:
-      "https://www.credly.com/earner/earned/badge/8d36a1d1-9cf2-4bf0-9e78-c4251c533b60",
-    issuerName: "Amazon Web Services",
-    validity: "13th Nov, 2022 - 13th Nov, 2025",
+      "https://drive.google.com/file/d/1KjrjvHVyCev8rVu7LqOh2Byb3E0sNBl7/view?usp=drive_link",
+    issuerName: "Jovian",
+    validity: "20th Dec 2022-Does not expire",
   },
   {
     _id: 2,
-    pic: "https://wajeshubham-portfolio.s3.ap-south-1.amazonaws.com/CCP.png",
-    certficateName: "AWS Certified Cloud Practitioner",
+    pic: "https://res.cloudinary.com/dxfdxwvlm/image/upload/v1711694858/namastereact_certificate_page-0001_rnr853.jpg",
+    certficateName: "Namaste-React Course",
     certificateUrl:
-      "https://www.credly.com/earner/earned/badge/8d36a1d1-9cf2-4bf0-9e78-c4251c533b60",
-    issuerName: "Amazon Web Services",
-    validity: "13th Nov, 2022 - 13th Nov, 2025",
+      "https://drive.google.com/file/d/1AzDmkDWIIzxJo0AJEL2gjTFm1cEDOkTz/view?usp=drive_link",
+    issuerName: "Namaste Dev By Akshay Saini",
+    validity: "18th august 2023- Does not Expire",
   },
+  {
+    _id: 3,
+    pic: "https://res.cloudinary.com/dxfdxwvlm/image/upload/v1711694857/zerotogbmscert_page-0001_a5g7vp.jpg",
+    certficateName: "Machine Learning with Python :Zero to GBMS",
+    certificateUrl:
+      "https://drive.google.com/file/d/1caTzJFLizl95zVVdk9IUnp6z_y_V4cZp/view?usp=sharing",
+
+    issuerName: "Jovian",
+    validity: "13th January 2023- Does not Expire",
+  },
+];
+
+export const headerItems = [
+  { _id: 1, name: "Projects", cred: "projects" },
+  { _id: 2, name: "Work History", cred: "workhistory" },
+  { _id: 3, name: "My Certificates", cred: "Certificates" },
 ];

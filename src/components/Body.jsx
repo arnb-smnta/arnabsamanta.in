@@ -7,6 +7,7 @@ import { FaGithub } from "react-icons/fa6";
 import Main from "./Main";
 import { profile, socialLinks } from "../constants";
 import Header from "./Header";
+import Footer from "./Footer";
 const Body = () => {
   return (
     <div className="bg-gray-100">
@@ -95,6 +96,7 @@ const Body = () => {
         </div>
         <Main />
       </div>
+      <Footer />
     </div>
   );
 };
