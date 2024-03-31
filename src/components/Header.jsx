@@ -8,13 +8,12 @@ const Header = () => {
     setmenuOpen(!menuOpen);
   };
   let menuref = useRef();
-  console.log(menuOpen);
+
   useEffect(() => {
     function handler(e) {
       if (!menuref.current.contains(e.target)) {
         setmenuOpen(false);
       }
-      console.log(menuref);
     }
     document.addEventListener("mousedown", handler);
     return () => {
