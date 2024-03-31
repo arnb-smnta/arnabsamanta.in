@@ -38,7 +38,11 @@ const Header = () => {
 
       <div className="ml-auto flex-row lg:hidden flex">
         <div className="h-14 w-14">
-          <img src="/public/menu.png" onClick={menuButtonClicked} alt="" />
+          <img
+            src="https://res.cloudinary.com/dxfdxwvlm/image/upload/v1711881150/menu-arnabsamanta.in.png"
+            onClick={menuButtonClicked}
+            alt=""
+          />
         </div>
       </div>
 
