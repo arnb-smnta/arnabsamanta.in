@@ -61,22 +61,13 @@ export const projects = [
       "JWT - tockens",
     ],
   },
-  {
-    _id: 2,
-    pic: "https://wajeshubham-portfolio.s3.ap-south-1.amazonaws.com/freeapiv1.png",
-    name: "Free-API",
-    projectLink: "",
-    sourceCode: "",
-    overview: "open source prohjecafafahahf lorem lorem lorem lorem lorem ",
-    techsUsed: ["Nodejs", "Ubuntu", "MongoDB", "Express-js"],
-  },
 ];
 
 export const certificates = [
   {
     _id: 1,
     pic: "https://res.cloudinary.com/dxfdxwvlm/image/upload/v1711694859/jovian_Pandas_cert_page-0001_zfq4m6.jpg",
-    certficateName: "Machine Laerning with Python:Zero to Pandas",
+    certficateName: "Machine Learning with Python:Zero to Pandas",
     certificateUrl:
       "https://drive.google.com/file/d/1KjrjvHVyCev8rVu7LqOh2Byb3E0sNBl7/view?usp=drive_link",
     issuerName: "Jovian",
@@ -105,6 +96,6 @@ export const certificates = [
 
 export const headerItems = [
   { _id: 1, name: "Projects", cred: "projects" },
-  { _id: 2, name: "Work History", cred: "workhistory" },
+  { _id: 2, name: "Top Skills", cred: "skills" },
   { _id: 3, name: "My Certificates", cred: "Certificates" },
 ];

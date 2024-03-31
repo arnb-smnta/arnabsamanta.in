@@ -42,6 +42,7 @@ const Header = () => {
           <img src="/public/menu.png" onClick={menuButtonClicked} alt="" />
         </div>
       </div>
+
       {menuOpen ? (
         <div className="w-full flex absolute justify-end mt-14 pr-14">
           <div

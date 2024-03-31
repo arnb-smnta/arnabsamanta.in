@@ -21,6 +21,9 @@ const Main = () => {
           </div>
         </div>
       </div>
+      <h1 id="skills" className="uppercase font-semibold text-xs text-gray-700">
+        Top Skills
+      </h1>
       <div className="md:grid md:grid-cols-12 mb-8">
         <div className="md:col-span-9 flex flex-wrap">
           {topSkills.map((item, index) => (
@@ -33,7 +36,9 @@ const Main = () => {
           ))}
         </div>
         <div className="md:col-span-3">
-          <h5 className="font-semibold mb-3">TOOLS & PLATFORMS</h5>
+          <h5 className="font-semibold mb-3 text-gray-700">
+            TOOLS & PLATFORMS
+          </h5>
           <ul>
             {toolsAPlatforms.map((item, index) => (
               <li
