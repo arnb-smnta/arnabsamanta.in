@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { headerItems } from "../constants";
+import { headerItems, profile, socialLinks } from "../constants";
 
 const Header = () => {
   const [menuOpen, setmenuOpen] = useState(false);
@@ -22,10 +22,11 @@ const Header = () => {
   }, []);
   return (
     <div className="flex justify-between p-4 lg:px-8" id="main-header">
-      <span className="inline-flex w-14 h-14 font-bold text-xl justify-center items-center text-center text-front border-2 border-solid border-front rounded-full  ">
-        AS
-      </span>
-
+      <a href={`${profile.homeUrl}`}>
+        <span className="inline-flex w-14 h-14 font-bold text-xl justify-center items-center text-center text-front border-2 border-solid border-front rounded-full  ">
+          AS
+        </span>
+      </a>
       <div className="ml-auto flex-row hidden lg:flex">
         {headerItems.map((item) => (
           <a href={`#${item.cred}`} key={item._id} id="scroll-link">
@@ -34,6 +35,15 @@ const Header = () => {
             </button>
           </a>
         ))}
+        <a
+          href={`mailto:${socialLinks.mail}`}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <button className="flex w-14 cursor-pointer h-14 ml-4 font-semibold px-2 bg-yellow-400 rounded-full justify-center items-center leading-tight lg:w-auto lg:h-auto lg:px-6 lg:py-2 lg:rounded-lg lg:self-start lg:mt-4 hover:opacity-75 transition-opacity duration-150">
+            <span className="hidden lg:block">Connect </span>{" "}
+          </button>
+        </a>
       </div>
 
       <div className="ml-auto flex-row lg:hidden flex">
@@ -69,6 +79,15 @@ const Header = () => {
                   </li>
                 </a>
               ))}
+              <a
+                href={`mailto:${socialLinks.mail}`}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <li aria-hidden="true" className="hover:bg-blue-400 rounded-xl">
+                  <span className="uppercase mt-0 text-xs">Connect</span>
+                </li>
+              </a>
             </ul>
           </div>
         </div>

@@ -4,9 +4,10 @@ export const profile = {
   firstName: "Arnab",
   lastName: "Samanta",
   typeOfDeveloper: "Full Stack Developer",
-  pic: "https://media.licdn.com/dms/image/D4D03AQE0oMo2p4zXIg/profile-displayphoto-shrink_400_400/0/1665338985395?e=1717027200&v=beta&t=XKYFh4zwYqQH3l_rXoeJPVmXw5_W2lxd-xD17UldrC8",
+  pic: "https://res.cloudinary.com/dxfdxwvlm/image/upload/v1712128954/arnab_wuuzje.jpg",
   location: "Kolkata , India",
   resumeLink: "",
+  homeUrl: "https://arnabsamanta.in/",
 };
 
 export const toolsAPlatforms = [
