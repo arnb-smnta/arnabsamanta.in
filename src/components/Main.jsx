@@ -1,6 +1,7 @@
 import React from "react";
 import {
   about,
+  blogItems,
   certificates,
   projects,
   socialLinks,
@@ -165,6 +166,49 @@ const Main = () => {
                 </a>
                 <p className="w-full whitespace-pre-line">{cert.issuerName}</p>
                 <p className="w-full whitespace-pre-line">{cert.validity}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="Articles mb-3 mt-1" id="Articles">
+        <h1 className=" font-semibold text-black text-sm uppercase">
+          Articles
+        </h1>
+        <div>
+          {blogItems.map((article) => (
+            <div
+              key={article._id}
+              className="border-t-4 border-line relative flex flex-wrap bg-white p-4 lg:p-8 bg-no-repeat text-sm mb-6 shadow-xl"
+            >
+              <div className="w-full lg:w-3/6 lg:pr-8 lg:pb-0">
+                <img
+                  className="border-white p-1 border-2"
+                  src={article.img}
+                  alt={article.name}
+                />
+              </div>
+
+              <div className="lg:flex-1">
+                <h4 className="font-bold mt-2 lg:mt-0"> {article.name}</h4>
+                <a
+                  className="underline break-all hover:opacity-75 transition-opacity duration-150"
+                  href={article.articleLink}
+                  target="_blank"
+                >
+                  Read the Article
+                </a>
+                <p className="w-full my-3">{article.description}</p>
+                <ul className="pr-2">
+                  {article.techs.map((items) => (
+                    <li
+                      key={items}
+                      className="inline-block px-3 py-1 mr-1 mt-1 font-medium text-xs rounded-lg border border-gray-200"
+                    >
+                      {items}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}

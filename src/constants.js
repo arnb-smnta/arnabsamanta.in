@@ -100,3 +100,15 @@ export const headerItems = [
   { _id: 2, name: "Top Skills", cred: "skills" },
   { _id: 3, name: "My Certificates", cred: "Certificates" },
 ];
+
+export const blogItems = [
+  {
+    _id: 1,
+    name: "Node-js vs Django",
+    img: "https://cdn.hashnode.com/res/hashnode/image/upload/v1712844193161/05da193a-b6ec-4ee4-b653-8cf15fa80d9c.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp",
+    articleLink: "https://blogs.arnabsamanta.in/why-node-js-over-django",
+    description:
+      "This a comaparison between two peer web-Backend Framework and what someone new should start learning on inception",
+    techs: ["nodeJs", "Django"],
+  },
+];
