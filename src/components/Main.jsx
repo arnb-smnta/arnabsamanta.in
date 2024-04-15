@@ -171,8 +171,11 @@ const Main = () => {
           ))}
         </div>
       </div>
-      <div className="Articles mb-3 mt-1" id="Articles">
-        <h1 className=" font-semibold text-black text-sm uppercase">
+      <div className="Articles mb-3 mt-1">
+        <h1
+          className=" font-semibold text-black text-sm uppercase"
+          id="Articles"
+        >
           Articles
         </h1>
         <div>

@@ -47,7 +47,7 @@ const Header = () => {
       </div>
 
       <div className="ml-auto flex-row lg:hidden flex">
-        <div className="h-14 w-14">
+        <div className="h-14 w-14 cursor-pointer">
           <img
             src="https://res.cloudinary.com/dxfdxwvlm/image/upload/v1711881150/menu-arnabsamanta.in.png"
             onClick={menuButtonClicked}
@@ -73,7 +73,7 @@ const Header = () => {
                 >
                   <li
                     aria-hidden="true"
-                    className="hover:bg-blue-400 rounded-xl"
+                    className="hover:bg-blue-400 rounded-md pl-2"
                   >
                     <span className="uppercase mt-0 text-xs">{item.name}</span>
                   </li>
@@ -84,8 +84,8 @@ const Header = () => {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <li aria-hidden="true" className="hover:bg-blue-400 rounded-xl">
-                  <span className="uppercase mt-0 text-xs">Connect</span>
+                <li aria-hidden="true" className="hover:bg-blue-400 rounded-md">
+                  <span className="uppercase mt-0 text-xs pl-2">Connect</span>
                 </li>
               </a>
             </ul>

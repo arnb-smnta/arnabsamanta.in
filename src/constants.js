@@ -99,6 +99,7 @@ export const headerItems = [
   { _id: 1, name: "Projects", cred: "projects" },
   { _id: 2, name: "Top Skills", cred: "skills" },
   { _id: 3, name: "My Certificates", cred: "Certificates" },
+  { _id: 4, name: "My Articles", cred: "Articles" },
 ];
 
 export const blogItems = [
