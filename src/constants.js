@@ -46,7 +46,7 @@ export const socialLinks = {
 export const projects = [
   {
     _id: 1,
-    pic: "https://res.cloudinary.com/dxfdxwvlm/image/upload/v1714013568/freeapi-thumbnail.png",
+    pic: "https://wajeshubham-portfolio.s3.ap-south-1.amazonaws.com/freeapiv1.png",
     name: "Free-API",
     projectLink: "https://api.freeapi.app/",
     sourceCode: "https://github.com/hiteshchoudhary/apihub",
