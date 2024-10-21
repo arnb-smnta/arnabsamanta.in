@@ -6,7 +6,8 @@ export const profile = {
   typeOfDeveloper: "Full Stack Developer",
   pic: "https://res.cloudinary.com/dxfdxwvlm/image/upload/v1712128954/arnab_wuuzje.jpg",
   location: "Kolkata , India",
-  resumeLink: "",
+  resumeLink:
+    "https://drive.google.com/file/d/16956keXLdRUzjJ0qmyUvSCnnSFssedvL/view?usp=sharing",
   homeUrl: "https://arnabsamanta.in/",
 };
 
@@ -52,6 +53,44 @@ export const projects = [
     sourceCode: "https://github.com/hiteshchoudhary/apihub",
     overview:
       "An open source project and Your own Api Hub to learn and master API integration.With over 2000+ stars on github, it comes with pre cooked public apis, kitchen sink module, and full blown complex app apis like e-commerce, social media, todos, authentication and many more to come in future",
+    techsUsed: [
+      "Nodejs",
+      "Ubuntu",
+      "MongoDB",
+      "Express-js",
+      "Open-source-software",
+      "Docker",
+      "JWT - tockens",
+    ],
+  },
+  {
+    _id: 2,
+    pic: "https://play-lh.googleusercontent.com/1hdsMuYsLnfB6yM2u3q6o2ITJSSoSBPtItcUMw38damDejNROLuA12Zfv5ivb959zVg",
+    name: "Expense Split App Full Stack Application",
+    projectLink: "https://server.splitbills.site",
+    sourceCode: "https://github.com/arnb-smnta/expense-split-prod-backend",
+    overview:
+      "Developed and hosted a Fully working expense-split Application, Frontend Hosted using -Netlify ,Backend Hosted using- Railway.app",
+    techsUsed: [
+      "React-js",
+      "Redux",
+      "Nodejs",
+      "Ubuntu",
+      "MongoDB",
+      "Express-js",
+      "Open-source-software",
+      "Docker",
+      "JWT - tockens",
+    ],
+  },
+  {
+    _id: 3,
+    pic: "https://cdn-icons-png.flaticon.com/512/722/722263.png",
+    name: "Text Based social media platform",
+    projectLink: "##",
+    sourceCode: "https://github.com/arnb-smnta/Tweets_backend",
+    overview:
+      "A hosted backend application for a Text-Based social media application",
     techsUsed: [
       "Nodejs",
       "Ubuntu",
