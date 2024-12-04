@@ -11,212 +11,204 @@ import {
 
 const Main = () => {
   return (
-    <div className="lg:col-span-8 lg:pl-10 lg:overflow-y-auto lg:max-h-screen">
-      <div className="pb-8">
-        <div className="lg:w-full pr-4 lg:pr-12 border-r-2 border-gray-200">
-          <h1 className="font-semibold text-xl">CURRENT POSITION</h1>
-          <h2 className="text-2xl loading-tight">Student at IGNOU</h2>
-          <div className="font-semibold text-sm uppercase pt-2">
-            <span className="inline-block w-3 h-3 rounded-full mr-1 bg-green-500"></span>
-            Available for Internship
+    <div className="lg:col-span-8 lg:pl-10 lg:overflow-y-auto lg:max-h-screen p-4">
+      {/* Current Position Section */}
+      <section className="pb-8 border-b border-gray-200">
+        <h1 className="text-xl font-semibold">CURRENT POSITION</h1>
+        <h2 className="text-2xl font-bold mt-2">Student at IGNOU</h2>
+        <div className="flex items-center text-sm font-semibold uppercase pt-2">
+          <span className="w-3 h-3 rounded-full bg-green-500 mr-2"></span>
+          Available for Internship
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="mt-8">
+        <h1
+          id="skills"
+          className="uppercase font-semibold text-xs text-gray-700"
+        >
+          Top Skills
+        </h1>
+        <div className="md:grid md:grid-cols-12 gap-4 mt-4">
+          <div className="md:col-span-9 flex flex-wrap gap-3">
+            {topSkills.map((item, index) => (
+              <div
+                key={index}
+                className="bg-blue-500 h-20 w-20 md:h-28 md:w-28 rounded-full flex justify-center items-center"
+              >
+                <p className="text-white text-center text-xs md:text-sm">
+                  {item}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="md:col-span-3">
+            <h5 className="font-semibold mb-3 text-gray-700">
+              Tools & Platforms
+            </h5>
+            <ul className="flex flex-wrap gap-2">
+              {toolsAPlatforms.map((item, index) => (
+                <li
+                  key={index}
+                  className="bg-yellow-300 px-3 py-1 rounded text-xs md:text-sm"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-      </div>
-      <h1 id="skills" className="uppercase font-semibold text-xs text-gray-700">
-        Top Skills
-      </h1>
-      <div className="md:grid md:grid-cols-12 mb-8">
-        <div className="md:col-span-9 flex flex-wrap">
-          {topSkills.map((item, index) => (
-            <div
-              key={index}
-              className="bg-blue-500 sm:h-28 sm:w-28 w-14 h-14 rounded-full flex justify-center items-center m-2"
-            >
-              <p className="text-white text-center text-xs">{item}</p>
-            </div>
-          ))}
-        </div>
-        <div className="md:col-span-3">
-          <h5 className="font-semibold mb-3 text-gray-700">
-            TOOLS & PLATFORMS
-          </h5>
-          <ul>
-            {toolsAPlatforms.map((item, index) => (
-              <li
-                key={index}
-                className="inline-block md:block mb-1 mr-1 md:mr-0"
-              >
-                <span className="inline-block subpixel-antialiased bg-yellow-300 px-3 py-1 text-xs md:text-2xl">
-                  {item}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <div className="About-section mb-8 text-xs">
-        <h5 className="pb-8 whitespace-pre-line">ABOUT</h5>
-        <div className="subpixel-antialiased">{about}</div>
-      </div>
-      <div className="projects-section mb-8" id="projects">
-        <div>
-          <h4 className="font-semibold uppercase mb-3 text-xs" id="projects">
-            Projects
-          </h4>
-        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="mt-8">
+        <h5 className="font-semibold text-gray-700 uppercase text-sm mb-4">
+          About
+        </h5>
+        <p className="text-sm text-gray-600 leading-relaxed">{about}</p>
+      </section>
+
+      {/* Projects Section */}
+      <section className="mt-8" id="projects">
+        <h4 className="font-semibold uppercase text-xs text-gray-700 mb-4">
+          Projects
+        </h4>
         {projects.map((item) => (
           <div
-            className="flex-1 project-items bg-white border border-solid shadow-lg mb-6 p-6 rounded-lg"
             key={item._id}
+            className="bg-white border shadow-md rounded-lg p-4 mb-6"
           >
-            <div className="flex justify-start items-center gap-2">
-              <div className="border border-solid border-gray-200 aspect-square shadow-xl p-1 rounded-sm sm:w-16 sm:h-16 h-12 w-12 flex-shrink-0 justify-center overflow-hidden">
+            <div className="flex items-start gap-4">
+              <div className="w-16 h-16 border border-gray-200 rounded-sm overflow-hidden">
                 <img
                   className="w-full h-full object-cover"
-                  src={`${item.pic}`}
-                  alt=""
+                  src={item.pic}
+                  alt={item.name}
                 />
               </div>
-              <div className="w-full">
-                <h4 className="font-bold text-xs">{item.name}</h4>
-                <a
-                  className="italic font-bold underline break-all hover:opacity-75 transition-opacity duration-150 text-xs"
-                  href={`${item.sourceCode}`}
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  Source Code
-                </a>
-                <br />
-                <a
-                  className="underline break-all hover:opacity-75 transition-opacity duration-150 text-xs"
-                  href={`${item.projectLink}`}
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  Project Link
-                </a>
+              <div className="flex-1">
+                <h4 className="font-bold text-sm">{item.name}</h4>
+                <div className="flex flex-col gap-1 mt-1 text-xs text-gray-700">
+                  <a
+                    href={item.sourceCode}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold underline hover:text-blue-500"
+                  >
+                    Source Code
+                  </a>
+                  <a
+                    href={item.projectLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-blue-500"
+                  >
+                    Project Link
+                  </a>
+                </div>
               </div>
             </div>
-            <div>
-              <p className="w-full py-4 whitespace-pre-line text-[10px]">
-                {item.overview}
-              </p>
-            </div>
-            <div>
-              <ul className="pr-2">
-                <li className="inline-block px-3 sm:py-1 py-0.5 mr-1 mt-1 font-medium rounded-lg border border-black text-[10px]">
-                  <span className="inline-block w-2 h-2 rounded-full mr-2 bg-green-500"></span>
-                  Status:Live
-                </li>
-                {item.techsUsed.map((tech) => (
-                  <li
-                    key={tech}
-                    className="inline-block px-3 sm:py-1 py-0.5 mr-1 mt-1 font-medium rounded-lg border border-black text-[10px]"
-                  >
-                    {tech}
-                  </li>
-                ))}
-              </ul>
+            <p className="text-xs text-gray-600 mt-4">{item.overview}</p>
+            <div className="flex flex-wrap gap-2 mt-4">
+              <span className="px-3 py-1 text-xs font-medium border rounded border-black">
+                <span className="inline-block w-2 h-2 rounded-full bg-green-500 mr-1"></span>
+                Status: Live
+              </span>
+              {item.techsUsed.map((tech, idx) => (
+                <span
+                  key={idx}
+                  className="px-3 py-1 text-xs font-medium border rounded border-black"
+                >
+                  {tech}
+                </span>
+              ))}
             </div>
           </div>
         ))}
-
-        <small className="italic underline text-gray-700 font-semibold w-full inline-flex justify-end items-end gap-1">
+        <small className="italic underline text-gray-700 font-semibold block mt-4">
           View more of my work on my{" "}
           <a
-            href={`${socialLinks.github}`}
+            href={socialLinks.github}
             className="text-blue-500"
             target="_blank"
           >
-            github
+            GitHub
           </a>{" "}
-          profile .
+          profile.
         </small>
-      </div>
+      </section>
 
-      <div className="Certificates" id="Certificates">
-        <div>
-          <h5 className="font-semibold text-front text-sm uppercase my-3">
-            Certificates
-          </h5>
-        </div>
-        <div className="certificates-list">
+      {/* Certificates Section */}
+      <section className="mt-8" id="certificates">
+        <h5 className="font-semibold text-sm uppercase text-gray-700 mb-4">
+          Certificates
+        </h5>
+        <div className="grid md:grid-cols-2 gap-4">
           {certificates.map((cert) => (
             <div
               key={cert._id}
-              className="border-t-4 border-line relative flex flex-wrap bg-white p-4 lg:p-8 bg-no-repeat text-sm mb-6 shadow-xl"
+              className="bg-white border shadow-md rounded-lg p-4"
             >
-              <div className="w-full pb-4 lg:w-2/5 lg:pr-8 lg:pb-0">
-                <img
-                  src={`${cert.pic}`}
-                  alt=""
-                  className="border border-spacing-1 border-gray-300"
-                />
-              </div>
-              <div className="lg:flex-1">
-                <h4 className="font-bold">{cert.certficateName} </h4>
-                <a
-                  className="underline break-all hover:opacity-75 transition-opacity duration-150"
-                  rel="noreferrer noopener"
-                  href={`${cert.certificateUrl}`}
-                  target="_blank"
-                >
-                  Credential URL{" "}
-                </a>
-                <p className="w-full whitespace-pre-line">{cert.issuerName}</p>
-                <p className="w-full whitespace-pre-line">{cert.validity}</p>
-              </div>
+              <img
+                src={cert.pic}
+                alt={cert.certficateName}
+                className="w-full h-40 object-cover rounded mb-4"
+              />
+              <h4 className="font-bold text-sm">{cert.certficateName}</h4>
+              <a
+                href={cert.certificateUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline text-sm text-blue-500 hover:text-blue-700"
+              >
+                Credential URL
+              </a>
+              <p className="text-xs text-gray-600 mt-1">{cert.issuerName}</p>
+              <p className="text-xs text-gray-600">{cert.validity}</p>
             </div>
           ))}
         </div>
-      </div>
-      <div className="Articles mb-3 mt-1">
-        <h1
-          className=" font-semibold text-black text-sm uppercase"
-          id="Articles"
-        >
+      </section>
+
+      {/* Articles Section */}
+      <section className="mt-8">
+        <h1 className="font-semibold uppercase text-sm text-gray-700 mb-4">
           Articles
         </h1>
-        <div>
-          {blogItems.map((article) => (
-            <div
-              key={article._id}
-              className="border-t-4 border-line relative flex flex-wrap bg-white p-4 lg:p-8 bg-no-repeat text-sm mb-6 shadow-xl"
+        {blogItems.map((article) => (
+          <div
+            key={article._id}
+            className="bg-white border shadow-md rounded-lg p-4 mb-6"
+          >
+            <img
+              src={article.img}
+              alt={article.name}
+              className="w-full h-40 object-cover rounded mb-4"
+            />
+            <h4 className="font-bold text-sm">{article.name}</h4>
+            <a
+              href={article.articleLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-sm text-blue-500 hover:text-blue-700"
             >
-              <div className="w-full lg:w-3/6 lg:pr-8 lg:pb-0">
-                <img
-                  className="border-white p-1 border-2"
-                  src={article.img}
-                  alt={article.name}
-                />
-              </div>
-
-              <div className="lg:flex-1">
-                <h4 className="font-bold mt-2 lg:mt-0"> {article.name}</h4>
-                <a
-                  className="underline break-all hover:opacity-75 transition-opacity duration-150"
-                  href={article.articleLink}
-                  target="_blank"
+              Read the Article
+            </a>
+            <p className="text-xs text-gray-600 mt-2">{article.description}</p>
+            <div className="flex flex-wrap gap-2 mt-2">
+              {article.techs.map((tech) => (
+                <span
+                  key={tech}
+                  className="px-3 py-1 text-xs font-medium border rounded border-gray-200"
                 >
-                  Read the Article
-                </a>
-                <p className="w-full my-3">{article.description}</p>
-                <ul className="pr-2">
-                  {article.techs.map((items) => (
-                    <li
-                      key={items}
-                      className="inline-block px-3 py-1 mr-1 mt-1 font-medium text-xs rounded-lg border border-gray-200"
-                    >
-                      {items}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                  {tech}
+                </span>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
+        ))}
+      </section>
     </div>
   );
 };

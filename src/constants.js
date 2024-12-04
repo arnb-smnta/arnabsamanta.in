@@ -17,8 +17,9 @@ export const toolsAPlatforms = [
   "Redux",
   "TailwindCSS",
   "Firebase",
+  "Appwrite",
   "Mongoose",
-  "Sequalize",
+  "Prisma",
 ];
 
 export const topSkills = [
@@ -37,7 +38,7 @@ export const topSkills = [
 ];
 
 export const about =
-  "Full Stack Web Developer ||Seeking Internships||Proficiency in MERN Stack||ReactNative";
+  "Hi, I'm Arnab Samanta, a Full-Stack Web Developer specializing in the MERN stack and React Native. I focus on building scalable, secure, and user-friendly applications. Currently pursuing a BCA at IGNOU, I'm passionate about learning, problem-solving, and creating impactful digital solutions.";
 export const socialLinks = {
   github: "https://github.com/arnb-smnta",
   mail: "arnab_smnta@outlook.com",
@@ -67,8 +68,8 @@ export const projects = [
     _id: 2,
     pic: "https://play-lh.googleusercontent.com/1hdsMuYsLnfB6yM2u3q6o2ITJSSoSBPtItcUMw38damDejNROLuA12Zfv5ivb959zVg",
     name: "Expense Split App Full Stack Application",
-    projectLink: "https://server.splitbills.site",
-    sourceCode: "https://github.com/arnb-smnta/expense-split-prod-backend",
+    projectLink: "https://splitbills.site",
+    sourceCode: "https://github.com/arnb-smnta/expense-split-app-revamped",
     overview:
       "Developed and hosted a Fully working expense-split Application, Frontend Hosted using -Netlify ,Backend Hosted using- Railway.app",
     techsUsed: [
@@ -87,7 +88,7 @@ export const projects = [
     _id: 3,
     pic: "https://cdn-icons-png.flaticon.com/512/722/722263.png",
     name: "Text Based social media platform",
-    projectLink: "##",
+    projectLink: "https://tweetservers.arnabsamanta.in",
     sourceCode: "https://github.com/arnb-smnta/Tweets_backend",
     overview:
       "A hosted backend application for a Text-Based social media application",
