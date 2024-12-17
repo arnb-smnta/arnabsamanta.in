@@ -5,10 +5,11 @@ export const profile = {
   lastName: "Samanta",
   typeOfDeveloper: "Full Stack Developer",
   pic: "https://res.cloudinary.com/dxfdxwvlm/image/upload/v1712128954/arnab_wuuzje.jpg",
-  location: "Kolkata , India",
+  location: "Hydrebad, India",
   resumeLink:
     "https://drive.google.com/file/d/16956keXLdRUzjJ0qmyUvSCnnSFssedvL/view?usp=sharing",
   homeUrl: "https://arnabsamanta.in/",
+  currentPosition: "FullStack Software Engineer Intern at Techdome Solutions",
 };
 
 export const toolsAPlatforms = [

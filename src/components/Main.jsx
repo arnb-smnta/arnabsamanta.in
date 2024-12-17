@@ -3,6 +3,7 @@ import {
   about,
   blogItems,
   certificates,
+  profile,
   projects,
   socialLinks,
   toolsAPlatforms,
@@ -15,7 +16,7 @@ const Main = () => {
       {/* Current Position Section */}
       <section className="pb-8 border-b border-gray-200">
         <h1 className="text-xl font-semibold">CURRENT POSITION</h1>
-        <h2 className="text-2xl font-bold mt-2">Student at IGNOU</h2>
+        <h2 className="text-2xl font-bold mt-2">{profile.currentPosition}</h2>
         <div className="flex items-center text-sm font-semibold uppercase pt-2">
           <span className="w-3 h-3 rounded-full bg-green-500 mr-2"></span>
           Available for Internship
