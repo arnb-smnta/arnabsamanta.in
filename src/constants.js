@@ -66,7 +66,7 @@ export const projects = [
   },
   {
     _id: 2,
-    pic: "https://play-lh.googleusercontent.com/1hdsMuYsLnfB6yM2u3q6o2ITJSSoSBPtItcUMw38damDejNROLuA12Zfv5ivb959zVg",
+    pic: "https://raw.githubusercontent.com/arnb-smnta/expense-split-app-revamped/refs/heads/main/Screenshots/dashboard-main-transparent.png",
     name: "Expense Split App Full Stack Application",
     projectLink: "https://splitbills.site",
     sourceCode: "https://github.com/arnb-smnta/expense-split-app-revamped",
